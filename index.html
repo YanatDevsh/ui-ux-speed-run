@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b3b">
+  <title>UI/UX Speed Run — портал хакатону</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="На головну">
+        <span class="brand-mark">⚡</span><span>UI/UX <b>SPEED RUN</b></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Відкрити меню">☰</button>
+      <nav id="mainNav">
+        <a href="#home" data-page="home">Головна</a>
+        <a href="#program" data-page="program">План</a>
+        <a href="#teams" data-page="teams">Команди</a>
+        <a href="#vote" data-page="vote">Оцінювання</a>
+        <a href="#feedback" data-page="feedback">Пропозиції</a>
+        <a href="#results" data-page="results">Результати</a>
+        <a href="#admin" data-page="admin" class="nav-admin">Керівник</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page active" id="page-home">
+        <div class="hero">
+          <div class="hero-copy">
+            <span class="eyebrow"><span class="live-dot"></span> ІНТЕРАКТИВНИЙ ПОРТАЛ ХАКАТОНУ</span>
+            <h1>Від ідеї<br><span>до робочого макета</span></h1>
+            <p class="hero-lead">Дві команди. Два бачення сайту викладача. Один спільний досвід створення кращого цифрового продукту.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#program">Переглянути програму <span>→</span></a>
+              <a class="btn btn-ghost" href="#vote">До оцінювання</a>
+            </div>
+            <div class="hero-meta">
+              <div><strong>120</strong><small>хвилин</small></div>
+              <div><strong>02</strong><small>команди</small></div>
+              <div><strong>01</strong><small>спільна мета</small></div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="hero-card main-card">
+              <div class="card-top"><span class="mini-pill">LIVE EVENT</span><span>● ● ●</span></div>
+              <div class="screen-symbol">✦</div>
+              <h3>DESIGN<br>THINK. BUILD.</h3>
+              <p>Teacher Portal</p>
+              <div class="progress-line"><i></i></div>
+              <div class="card-bottom"><span>TEAM 01</span><span>TEAM 02</span></div>
+            </div>
+            <div class="float-tag tag-a">✦ UI / UX</div>
+            <div class="float-tag tag-b">⌘ WEB</div>
+            <div class="float-tag tag-c">↗ CREATE</div>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div><span class="eyebrow">СЬОГОДНІШНЄ ЗАВДАННЯ</span><h2>Створюємо сайт викладача</h2></div>
+          <span class="status-chip" id="phaseChip">Очікування старту</span>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card"><span class="feature-icon violet">▦</span><h3>Дизайн</h3><p>Продумати стиль, кольори, структуру та зручність сторінок.</p></article>
+          <article class="feature-card"><span class="feature-icon blue">⌘</span><h3>Вебтехнології</h3><p>Перетворити ідею на макет або демонстраційну вебсторінку.</p></article>
+          <article class="feature-card"><span class="feature-icon gold">↗</span><h3>Взаємний аудит</h3><p>Побачити сильні сторони іншої команди та запропонувати покращення.</p></article>
+        </div>
+        <div class="join-strip">
+          <div><span class="eyebrow">ПІДКЛЮЧАЙСЯ З ТЕЛЕФОНУ</span><h3>Усі матеріали хакатону — за одним посиланням</h3><p>Відскануй QR-код або відкрий адресу порталу на своєму пристрої.</p></div>
+          <div class="qr-box"><div id="homeQr"></div><small>QR-код порталу</small></div>
+        </div>
+      </section>
+
+      <section class="page" id="page-program">
+        <div class="page-heading"><span class="eyebrow">ROADMAP / 120 MIN</span><h1>План хакатону</h1><p>Стеж за етапами. Керівник може запускати таймер і позначати поточний етап у панелі керування.</p></div>
+        <div class="timer-panel">
+          <div><span class="eyebrow">ПОТОЧНИЙ ЕТАП</span><h2 id="currentStage">Очікуємо початку</h2><p id="stageDescription">Підготуйте пристрої та сформуйте команди.</p></div>
+          <div class="timer-display" id="timerDisplay">120:00</div>
+        </div>
+        <div class="timeline" id="timeline">
+          <article class="timeline-item"><span class="time">00–10 хв</span><div><h3>01. Старт і постановка завдання</h3><p>Знайомство з темою, правилами, командами та очікуваними результатами.</p></div><span class="duration">10 хв</span></article>
+          <article class="timeline-item"><span class="time">10–45 хв</span><div><h3>02. Ідея та командна розробка</h3><p>Визначення аудиторії, стилю, структури сайту та розподіл ролей.</p></div><span class="duration">35 хв</span></article>
+          <article class="timeline-item"><span class="time">45–75 хв</span><div><h3>03. Створення прототипу</h3><p>Макет у Figma або початкова HTML/CSS-реалізація.</p></div><span class="duration">30 хв</span></article>
+          <article class="timeline-item"><span class="time">75–90 хв</span><div><h3>04. Презентація проєктів</h3><p>Кожна команда демонструє концепцію, сторінки та ключові рішення.</p></div><span class="duration">15 хв</span></article>
+          <article class="timeline-item"><span class="time">90–105 хв</span><div><h3>05. Взаємний UX-аудит</h3><p>Команди оцінюють роботу конкурентів і формують конкретні рекомендації.</p></div><span class="duration">15 хв</span></article>
+          <article class="timeline-item"><span class="time">105–115 хв</span><div><h3>06. Вдосконалення</h3><p>Кожна команда обирає та впроваджує хоча б одну пропозицію конкурентів.</p></div><span class="duration">10 хв</span></article>
+          <article class="timeline-item"><span class="time">115–120 хв</span><div><h3>07. Фінал і підсумки</h3><p>Порівняння результатів, висновки та спільні ідеї для майбутнього сайту.</p></div><span class="duration">5 хв</span></article>
+        </div>
+        <div class="notice"><b>Порада:</b> не прагніть завершити повноцінний сайт за дві години. Головний результат — продуманий прототип, демонстрація ключових функцій і аргументовані UX-рекомендації.</div>
+      </section>
+
+      <section class="page" id="page-teams">
+        <div class="page-heading"><span class="eyebrow">TWO TEAMS / ONE CHALLENGE</span><h1>Команди хакатону</h1><p>Кожна команда самостійно обирає назву, стиль, кольори та спосіб подання сайту викладача.</p></div>
+        <div class="team-grid">
+          <article class="team-card team-blue"><div class="team-number">TEAM 01</div><div class="team-symbol">01</div><h2>Команда №1</h2><p>Власна концепція сайту викладача. Стиль і назву визначають учасники.</p><div class="team-tags"><span>UI / UX</span><span>Design</span><span>Frontend</span></div></article>
+          <article class="team-card team-purple"><div class="team-number">TEAM 02</div><div class="team-symbol">02</div><h2>Команда №2</h2><p>Альтернативне бачення сайту викладача. Жодних обмежень у творчих рішеннях.</p><div class="team-tags"><span>UI / UX</span><span>Design</span><span>Frontend</span></div></article>
+        </div>
+        <div class="section-heading"><div><span class="eyebrow">MUST-HAVE</span><h2>Що має бути в макеті</h2></div></div>
+        <div class="check-grid">
+          <div class="check-item">✓ Головна сторінка та коротка інформація про викладача</div>
+          <div class="check-item">✓ Розділ «Про викладача»</div>
+          <div class="check-item">✓ Навчальні дисципліни та матеріали</div>
+          <div class="check-item">✓ Досягнення, сертифікати або публікації</div>
+          <div class="check-item">✓ Контакти та способи зв'язку</div>
+          <div class="check-item">✓ Вхід адміністратора / редагування</div>
+          <div class="check-item">✓ Продумана мобільна версія</div>
+          <div class="check-item">✓ Зрозумілі кнопки та навігація</div>
+        </div>
+        <div class="notice">Достатньо якісно показати головну сторінку, один внутрішній розділ та макет входу адміністратора. Інші розділи можна представити схемою.</div>
+      </section>
+
+      <section class="page" id="page-vote">
+        <div class="page-heading"><span class="eyebrow">PEER REVIEW</span><h1>Оцінювання команд</h1><p>Кожна команда оцінює роботу іншої команди. Не оцінюй власну команду. Оцінювання доступне після відкриття керівником.</p></div>
+        <div class="vote-locked" id="voteLocked"><div class="lock-icon">⌑</div><h2>Голосування ще не відкрите</h2><p>Дочекайся команди керівника. Після відкриття тут з'явиться форма оцінювання.</p></div>
+        <form id="voteForm" class="vote-form hidden">
+          <div class="vote-topline"><span class="status-chip status-open">Голосування відкрите</span><span class="small-muted">Одна оцінка з одного пристрою</span></div>
+          <label class="field-label" for="myTeam">Я представляю команду</label>
+          <select id="myTeam" required><option value="">Оберіть свою команду</option><option value="team1">Команда №1</option><option value="team2">Команда №2</option></select>
+          <div class="target-banner" id="targetBanner">Ви оцінюєте: команду-конкурента</div>
+          <div id="criteriaList"></div>
+          <label class="field-label" for="voteComment">Що варто покращити? (необов'язково)</label>
+          <textarea id="voteComment" maxlength="500" placeholder="Наприклад: додати пошук навчальних матеріалів..."></textarea>
+          <label class="field-label" for="voteIdea">Яке рішення конкурента варто запозичити? (необов'язково)</label>
+          <textarea id="voteIdea" maxlength="500" placeholder="Нам сподобалося..."></textarea>
+          <button class="btn btn-primary full" type="submit" id="submitVote">Надіслати оцінку</button>
+          <p class="form-message" id="voteMessage" aria-live="polite"></p>
+        </form>
+        <div class="notice"><b>Правило чесності:</b> голосування використовує анонімну авторизацію Firebase та обмеження «один голос на пристрій/сеанс користувача». Для повністю контрольованого списку учасників потрібна окрема реєстрація або коди учасників.</div>
+      </section>
+
+      <section class="page" id="page-feedback">
+        <div class="page-heading"><span class="eyebrow">DESIGN CRITIQUE</span><h1>Пропозиції конкуренту</h1><p>Критика має допомагати вдосконалювати продукт. Пишіть конкретно, доброзичливо та аргументовано.</p></div>
+        <div class="feedback-grid">
+          <article class="feedback-card"><span class="feedback-icon">✦</span><h2>Що сподобалося?</h2><p>Відзначте сильні рішення іншої команди: композицію, кольори, меню, картки, логіку.</p></article>
+          <article class="feedback-card"><span class="feedback-icon">⌁</span><h2>Що можна покращити?</h2><p>Знайдіть місця, де користувачу може бути незрозуміло або незручно.</p></article>
+          <article class="feedback-card"><span class="feedback-icon">↗</span><h2>Що варто запозичити?</h2><p>Назвіть хоча б одну ідею конкурента, яку ви хотіли б використати у власному проєкті.</p></article>
+        </div>
+        <div class="notice"><b>Фінальне завдання:</b> кожна команда має обрати хоча б одну рекомендацію конкурентів і показати, що саме вона змінила у своєму макеті.</div>
+      </section>
+
+      <section class="page" id="page-results">
+        <div class="page-heading"><span class="eyebrow">LIVE SCOREBOARD</span><h1>Результати хакатону</h1><p>Підсумки оцінювання оновлюються після надходження голосів. Результати можна відкрити після завершення голосування.</p></div>
+        <div class="results-locked" id="resultsLocked"><div class="lock-icon">◷</div><h2>Результати будуть опубліковані після голосування</h2><p>Керівник відкриє результати у фінальній частині заходу.</p></div>
+        <div id="resultsContent" class="hidden">
+          <div class="score-grid">
+            <article class="score-card blue-score"><span>КОМАНДА №1</span><strong id="score1">—</strong><small>середній бал зі 100</small></article>
+            <article class="score-card purple-score"><span>КОМАНДА №2</span><strong id="score2">—</strong><small>середній бал зі 100</small></article>
+          </div>
+          <div class="results-panel"><div class="section-heading"><div><span class="eyebrow">ОЦІНКИ ЗА КРИТЕРІЯМИ</span><h2>Порівняння</h2></div><span class="small-muted" id="voteCount">0 оцінок</span></div><div id="criteriaResults"></div></div>
+          <div class="results-panel"><span class="eyebrow">ВОРОЖІ ПОРАДИ? НІ — КОРИСНІ ПОРАДИ!</span><h2>Відгуки учасників</h2><div id="commentsList" class="comments-list"></div></div>
+        </div>
+      </section>
+
+      <section class="page" id="page-admin">
+        <div class="page-heading"><span class="eyebrow">CONTROL ROOM</span><h1>Панель керівника</h1><p>Керуйте етапами, таймером, голосуванням і публікацією результатів.</p></div>
+        <div id="adminLogin" class="admin-login">
+          <div class="admin-login-icon">⚙</div><h2>Вхід керівника</h2><p>Увійдіть за обліковим записом Firebase Authentication, який ви створили для адміністратора.</p>
+          <form id="adminLoginForm"><label class="field-label" for="adminEmail">Email</label><input id="adminEmail" type="email" required placeholder="admin@example.com"><label class="field-label" for="adminPassword">Пароль</label><input id="adminPassword" type="password" required placeholder="Пароль"><button class="btn btn-primary full" type="submit">Увійти</button><p class="form-message" id="adminMessage"></p></form>
+        </div>
+        <div id="adminControls" class="admin-controls hidden">
+          <div class="admin-welcome"><div><span class="eyebrow">ВИ УВІЙШЛИ ЯК КЕРІВНИК</span><h2>Керування заходом</h2></div><button class="btn btn-ghost" id="logoutBtn">Вийти</button></div>
+          <div class="admin-grid">
+            <article class="admin-card"><h3>Поточний етап</h3><select id="adminStage"><option value="0">Старт і завдання</option><option value="1">Командна розробка</option><option value="2">Створення прототипу</option><option value="3">Презентація</option><option value="4">Взаємний UX-аудит</option><option value="5">Вдосконалення</option><option value="6">Фінал</option></select><button class="btn btn-primary full" id="setStage">Оновити етап</button></article>
+            <article class="admin-card"><h3>Таймер</h3><div class="timer-display small-timer" id="adminTimer">120:00</div><div class="button-row"><button class="btn btn-primary" id="startTimer">Старт</button><button class="btn btn-ghost" id="pauseTimer">Пауза</button><button class="btn btn-ghost" id="resetTimer">Скинути</button></div></article>
+            <article class="admin-card"><h3>Голосування</h3><p id="votingState">Зараз закрите</p><button class="btn btn-primary full" id="openVoting">Відкрити голосування</button><button class="btn btn-ghost full" id="closeVoting">Закрити голосування</button></article>
+            <article class="admin-card"><h3>Публікація результатів</h3><p id="resultsState">Результати приховані</p><button class="btn btn-primary full" id="publishResults">Опублікувати результати</button><button class="btn btn-ghost full" id="hideResults">Приховати результати</button></article>
+          </div>
+          <div class="admin-card"><h3>Стан порталу</h3><p id="connectionStatus">Перевірка підключення…</p><p class="small-muted">Порада: відкрийте головну сторінку на проєкторі, а панель керівника — в окремій вкладці.</p></div>
+        </div>
+      </section>
+    </main>
+    <footer><div class="footer-brand">⚡ UI/UX SPEED RUN</div><p>Навчаймося створювати, тестувати та вдосконалювати цифрові продукти разом.</p><span>Teacher Portal Challenge · 2026</span></footer>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
